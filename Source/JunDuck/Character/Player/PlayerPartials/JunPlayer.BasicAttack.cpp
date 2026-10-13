@@ -149,7 +149,7 @@ void AJunPlayer::ProcessBasicAttackStart()
 		return;
 	}
 
-	// 怨듦꺽 ?쒖옉 ???寃??뚯쟾 蹂댁“/?대룞 李⑤떒/肄ㅻ낫 ?곹깭瑜???踰덉뿉 ?명똿?쒕떎.
+	// Initialize target-facing assistance, movement blocking, and combo state when starting an attack.
 	bBufferedBasicAttackInput = false;
 
 	TargetActor = LockOnTarget ? LockOnTarget.Get() : FindBestAttackTarget();
