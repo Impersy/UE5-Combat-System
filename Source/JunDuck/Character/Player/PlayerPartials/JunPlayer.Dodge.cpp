@@ -61,9 +61,9 @@ void AJunPlayer::StartDodgeInternal(bool bIgnoreDodgeBlockAndReleaseGate)
 
 	CancelLockOnTurn();
 
-	// 援щⅤ湲곕뒗 ?낅젰 異⑸룎????븘???곹깭 ?쒓렇瑜?癒쇱? ?좉렐 ??紐쏀?二쇰? ?쒖옉?쒕떎.
-	// ?먯쑀 移대찓?쇰뒗 ?낅젰 諛⑺뼢?쇰줈 罹먮┃?곕? 癒쇱? 留욎텛怨?
-	// ?쎌삩? StartDodge ?덉뿉???좏깮??諛⑺뼢蹂?紐쏀?二쇨? ?뚰뵾 諛⑺뼢??梨낆엫吏꾨떎.
+	// Start dodging by locking the action and movement tags before playing the montage.
+	// With a free camera, first align the character with the movement input.
+	// When locked on, the directional montage selected here determines the dodge direction.
 	UAnimMontage* DodgeMontageToPlay = GetDodgeMontageToPlay();
 	if (!DodgeMontageToPlay)
 	{
